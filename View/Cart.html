@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/942c6b9015.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../Styles/Cart.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="off-screen-menu">
+            <nav class="hidden-nav">
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href=""></a>Shop</li>
+                    <li><a href=""></a>News</li>
+                    <li><a href="Cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <nav>
+            <div class="ham-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="banner">
+            <div class="cartDiv">
+                <h2 class="Shop-txt">Shopping Cart</h2>
+                <div class="cart-container">
+
+                    <ul class="cart-items scroll"></ul>
+                    <div class="total">Total: Rp. 0</div>
+                    <button id="clear-cart-btn">Clear Cart</button>
+                </div>
+            </div>
+            <canvas id="dotsCanvas"></canvas>
+        </div>
+    </main>
+
+
+
+    <script src="../Scripts/Cart.js"></script>
+</body>
+
+</html>
