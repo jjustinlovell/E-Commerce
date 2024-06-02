@@ -19,6 +19,7 @@ document.addEventListener("click", (e) => {
         hamMenu.classList.remove("active");
     }
 });
+
 const updateCartUI = () => {
     cartItemsList.innerHTML = '';
     let total = 0;

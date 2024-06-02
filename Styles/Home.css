@@ -1,6 +1,15 @@
 html,body{
     margin: 0;
     padding: 0;
+    font-family: "Josefin Sans", sans-serif;
+
+}
+
+.josefin-sans{
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
 header{
@@ -50,7 +59,7 @@ nav ul li{
 }
 
 .main-txt{
-    font-size: 5vw;
+    font-size: 4vw;
 }
 
 .description{
@@ -136,7 +145,7 @@ nav ul li{
     border-radius: 10%;
     position: absolute;
     right: 0;
-    bottom: 12px;
+    bottom: 22px;
     height: 3vh;
     padding-left: 10px;
     padding-right: 10px;
@@ -157,7 +166,7 @@ nav ul li{
     align-items: center;    
     justify-content: center;
     text-align: center;
-    font-size: 1vw;
+    font-size: 1.5vw;
     transition: .3s ease;
     z-index: 500;
 }
@@ -373,7 +382,7 @@ img.displaySlide{
 footer{
     background-color: rgb(228, 228, 228);
     color: black;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     padding: 30px;
     font-size: 1vw;
 }
@@ -409,10 +418,45 @@ footer{
 
 .CR{
     text-align: center;
+    margin-top: 40px;
 }
 
 .CR h1{
     margin: 0;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,49 +8,48 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../Styles/Cart.css">
+    <link rel="stylesheet" href="../Styles/Shop.css">
     <title>Document</title>
 </head>
-
 <body>
     <header>
         <div class="off-screen-menu">
             <nav class="hidden-nav">
                 <ul>
                     <li><a href="Home.html">Home</a></li>
-                    <li><a href="Shop.html">Shop</a></li>
+                    <li><a href="Shop.html"></a>Shop</li>
                     <li><a href="News.html">News</a></li>
                     <li><a href="Cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 </ul>
             </nav>
         </div>
-
         <nav>
             <div class="ham-menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
+            </div>
         </nav>
     </header>
-    <main>
-        <div class="banner">
-            <div class="cartDiv">
-                <h2 class="Shop-txt">Shopping Cart</h2>
-                <div class="cart-container">
 
-                    <ul class="cart-items scroll"></ul>
-                    <div class="total">Total: Rp. 0</div>
-                    <button id="clear-cart-btn">Clear Cart</button>
-                </div>
+    <main>
+        <div class="SHOP">
+            <div>
+                <ul class="category">
+                    <li data-category="ALL">ALL</li>
+                    <li data-category="WOMEN">WOMEN</li>
+                    <li data-category="MEN">MEN</li>
+                    <li data-category="KIDS">KIDS</li>
+                </ul>
             </div>
-            <canvas id="dotsCanvas"></canvas>
+        </div>
+
+        <div class="SOFFER">
+            <div class="big-div"></div>
         </div>
     </main>
-
-
-
-    <script src="../Scripts/Cart.js"></script>
+    
+    <script src="../Scripts/Shop.js"></script>
 </body>
-
 </html>

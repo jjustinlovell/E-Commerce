@@ -44,51 +44,6 @@ const specialOfferItems = [
 
 ];
 
-// const slides = document.querySelectorAll(".slides img");
-// let slideIndex = 0;
-// let intervalId = null;
-
-// document.addEventListener("DOMContentLoaded",initializeSlider);
-
-// function initializeSlider(){
-
-//     if(slides.length > 0){
-//         slides[slideIndex].classList.add("displaySlide");
-//         intervalId = setInterval(nextSlide, 5000)
-//     }
-    
-
-// }
-
-// function showSlide(index){
-
-//     if(index >= slides.length){
-//         slideIndex = 0;
-//     }
-//     else if(index < 0)
-//     {
-//         slideIndex = slides.length - 1;
-//     }
-
-//     slides.forEach(slide => {
-//         slide.classList.remove("displaySlide")
-//     });
-
-//     slides[slideIndex].classList.add("displaySlide");
-
-
-// }
-
-// function previousSlide(){
-//     clearInterval(intervalId);
-//     slideIndex--;
-//     showSlide(slideIndex);
-// }
-
-// function nextSlide(){
-//     slideIndex++;
-//     showSlide(slideIndex);
-// }
 
 const slides = document.querySelectorAll(".slides .slide");
 let slideIndex = 0;
@@ -199,6 +154,16 @@ const createSpecialOfferItem = (item) => {
 };
 
 
+const specialOfferContainer = document.querySelector('.big-div');
+
+
+specialOfferItems.forEach(item => {
+    const specialOfferItem = createSpecialOfferItem(item);
+    specialOfferContainer.appendChild(specialOfferItem);
+});
+
+
+
 const carts = JSON.parse(localStorage.getItem('cartItems')) || [];
 
 const cartItems = document.querySelector('.cart-items');
@@ -239,15 +204,6 @@ const loadCartFromLocalStorage = () => {
         updateCartUI();
     }
 };
-
-const specialOfferContainer = document.querySelector('.big-div');
-
-specialOfferItems.forEach(item => {
-    const specialOfferItem = createSpecialOfferItem(item);
-    specialOfferContainer.appendChild(specialOfferItem);
-});
-
-
 
 let banner = document.querySelector('.banner');
 let canvas = document.getElementById('dotsCanvas');
@@ -336,3 +292,40 @@ window.addEventListener('resize', () => {
 
 drawDots();
 animate();
+
+const createModal = () => {
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+    
+    const modalContent = document.createElement('div');
+    modalContent.className = 'modal-content';
+
+    const closeBtn = document.createElement('span');
+    closeBtn.className = 'close-btn';
+    closeBtn.innerHTML = '&times;';
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    const message = document.createElement('p');
+    message.textContent = 'Item has been added to cart';
+
+    modalContent.appendChild(closeBtn);
+    modalContent.appendChild(message);
+    modal.appendChild(modalContent);
+
+    return modal;
+};
+
+const addToCartButtons = document.querySelectorAll('.add-to-cart');
+addToCartButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = createModal();
+        document.body.appendChild(modal);
+        modal.style.display = 'block';
+
+        setTimeout(() => {
+            modal.remove();
+        }, 3000);
+    });
+});

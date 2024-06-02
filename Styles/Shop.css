@@ -1,0 +1,259 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.josefin-sans{
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+header{
+    background-color: white;
+    z-index: 100;
+}
+
+nav{
+    display: flex;
+    background-color: rgb(249, 249, 236);
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+nav ul li{
+    list-style-type: none;
+    margin-bottom: 50px;
+}
+
+.off-screen-menu {
+    background-color:  red;
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5vw;
+    transition: .3s ease;
+    z-index: 500;
+}
+
+.off-screen-menu.active {
+    right: 0;
+}
+
+.ham-menu {
+    height: 50px;
+    width: 40px;
+    margin-left:auto;
+    margin-right: 50px;
+    position: relative;
+    z-index: 501;
+    top: 60px;
+
+}
+.ham-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: red;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+.ham-menu.active span {
+    background-color: white;
+}
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.hidden-nav{
+    background-color: red;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.category{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+.category li{
+    list-style-type: none;
+    font-size: 1.3vw;
+    border-bottom: none;
+}
+
+.category li.active {
+    border-bottom: 2px solid red;
+}
+
+.SHOP{
+    padding-top: 5%;
+    background-color: rgb(249, 249, 236);
+    padding-bottom: 1%;
+}
+
+.description{
+    width: 20vw;
+    margin: 0px 50px 50px 50px;
+    transition: 0.5s;
+}
+
+.description h2{
+    font-size: 1vw;
+}
+
+/* .description:hover{
+    transform: scale(1.1);
+} */
+
+.img-item{
+    width: 20vw;
+    transition: 0.5s;
+}
+
+.img-item:hover{
+    transform:scale(1.2);
+}
+
+.SOFFER h1{
+    text-align: center;
+}
+
+.price{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    font-size: 1vw;
+}
+
+.plus{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    border-radius: 100px;
+    transition: 0.6s;
+    padding: 10px;
+}
+
+.plus:hover{
+    opacity: 0.8;
+    background-color: rgb(197, 197, 197);
+   
+}
+
+.span-div{
+    display: flex;
+    justify-content: space-between;
+    color: grey;
+    font-weight: bolder;
+    font-size: 1vw;
+}
+
+.big-div{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.offer-txt{
+    background-color: red;
+    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-to-cart{
+    color: red;
+    /* background-color: rgb(197, 197, 197); */
+    border: none;
+    border-radius: 10%;
+    position: absolute;
+    right: 0;
+    bottom: 22px;
+    height: 3vh;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
