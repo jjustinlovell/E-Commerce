@@ -50,13 +50,17 @@ nav ul li{
 }
 
 .main-txt{
-    font-size: 85px;
+    font-size: 5vw;
 }
 
 .description{
-    width: 300px;
+    width: 20vw;
     margin: 0px 50px 50px 50px;
     transition: 0.5s;
+}
+
+.description h2{
+    font-size: 1vw;
 }
 
 /* .description:hover{
@@ -64,7 +68,7 @@ nav ul li{
 } */
 
 .img-item{
-    width: 300px;
+    width: 20vw;
     transition: 0.5s;
 }
 
@@ -79,6 +83,8 @@ nav ul li{
 .price{
     display: flex;
     position: relative;
+    flex-wrap: wrap;
+    font-size: 1vw;
 }
 
 .plus{
@@ -101,6 +107,7 @@ nav ul li{
     justify-content: space-between;
     color: grey;
     font-weight: bolder;
+    font-size: 1vw;
 }
 
 .big-div{
@@ -129,15 +136,16 @@ nav ul li{
     border-radius: 10%;
     position: absolute;
     right: 0;
-    bottom: 15px;
-    height: 30px;
+    bottom: 12px;
+    height: 3vh;
     padding-left: 10px;
     padding-right: 10px;
     font-weight: bold;
+    font-size: 1vw;
 }
 
 .off-screen-menu {
-    background-color:  rgb(205, 199, 199);
+    background-color:  red;
     height: 100vh;
     width: 100%;
     max-width: 450px;
@@ -149,7 +157,7 @@ nav ul li{
     align-items: center;    
     justify-content: center;
     text-align: center;
-    font-size: 3rem;
+    font-size: 1vw;
     transition: .3s ease;
     z-index: 500;
 }
@@ -201,7 +209,11 @@ nav ul li{
 }
 
 .hidden-nav{
-    background-color: rgb(205, 199, 199);
+    background-color: red;
+}
+
+.hidden-nav ul{
+    padding: 0;
 }
 
 a{
@@ -213,9 +225,194 @@ a{
     background-color: transparent;
     color: red;
     border: 1px solid red;
-    border-radius: 20px;
-    width: 200px;
+    border-radius: 10px;
+    width: 10vw;
     height: 40px;
-    font-weight: bolder;
+    font-size: 1vw;
 }
+
+/* .slider{
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+.slider img{
+    width: 100%;
+    display: none;
+}
+
+img.displaySlide{
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.slider button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.162);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.prev{
+    left: 10px;
+}
+
+.next{
+    right: 10px;
+}
+
+@keyframes fade{
+    from {opacity: .5}
+    to {opacity: 1}
+} */
+
+.slider {
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+.slides {
+    position: relative;
+}
+
+.slide {
+    display: none;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+}
+
+.slide .text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: bolder;
+    text-shadow: 1px 1px black;
+    margin-left: 100px; 
+    /* MARGIN LEFT HILANGIN PADA BREAK POINT TERTENTU */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 2.2vw;
+}
+
+.slide .text h3{
+    color: red;
+}
+
+.displaySlide {
+    display: block;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.162);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+@keyframes fade {
+    from {opacity: 0.5}
+    to {opacity: 1}
+}
+
+.benefits{
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 7%;
+}
+
+.flex-benefits{
+    display: flex;
+    justify-content: center;
+    margin-top: 6%;
+}
+
+.benefits h1{
+    font-size: 2vw;
+}
+
+.benefits-point{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.CICON{
+    font-size: 5vw;
+}
+
+.ben-text{
+    margin-top: 15%;
+}
+
+footer{
+    background-color: rgb(228, 228, 228);
+    color: black;
+    padding-bottom: 10px;
+    padding: 30px;
+    font-size: 1vw;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.list{
+    padding: 0;
+}
+
+.socials{
+    display: flex;
+}
+
+.socials li{
+    margin-right: 20px;
+}
+
+.list li{
+    list-style-type: none;
+    margin-bottom: 30px;
+}
+
+.list li a{
+    color: black;
+    text-decoration: none;
+}
+
+.CR{
+    text-align: center;
+}
+
+.CR h1{
+    margin: 0;
+}
+
 
