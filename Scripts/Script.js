@@ -213,7 +213,7 @@ const ctx = canvas.getContext('2d');
 
 const dots = [];
 const arrayColors = ['#ff9c9c', '#ffc0c0', '#ff6666', '#ff484d', '#ff0000'];
-for (let index = 0; index < 100; index++) {
+for (let index = 0; index < 60; index++) {
     dots.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,

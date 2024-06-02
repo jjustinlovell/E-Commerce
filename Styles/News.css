@@ -19,7 +19,7 @@ header{
 
 nav{
     display: flex;
-    background-color: rgb(249, 249, 236);
+    background-color: white;
     justify-content: space-around;
     align-items: center;
     color: white;
@@ -125,7 +125,7 @@ section{
     background-repeat: no-repeat;
     background-size: cover; */
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: grey;
     position: relative;
 }
@@ -144,7 +144,7 @@ section{
 }
 
 section h1{
-    color: white;
+    color: black;
 }
 
 .container{
@@ -156,9 +156,21 @@ section h1{
 .news{
     height: 100%;
     width: 40%;
-    background-color: black;
+    background-color: white;
+    position: relative;
+}
+
+.info{
     position: absolute;
-    right: 0;
+    top: 50%;
+    left: 30px;
+}
+
+.info2{
+    text-align: right;
+    position: absolute;
+    top: 50%;
+    right: 30px;
 }
 
 .image{
@@ -168,6 +180,16 @@ section h1{
 }
 
 .image img{
-    height: 100%;
+    height: 100vh;
     width: 100%;
+    min-width: 800px;
+    
+}
+
+.btn{
+    background-color: transparent;
+    border: 1px solid black;
+    width: 100px;
+    height: 30px;
+
 }
