@@ -240,48 +240,6 @@ a{
     font-size: 1vw;
 }
 
-/* .slider{
-    position: relative;
-    width: 100%;
-    margin: auto;
-}
-
-.slider img{
-    width: 100%;
-    display: none;
-}
-
-img.displaySlide{
-    display: block;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-.slider button{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    padding: 10px 15px;
-    background-color: rgba(0, 0, 0, 0.162);
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.prev{
-    left: 10px;
-}
-
-.next{
-    right: 10px;
-}
-
-@keyframes fade{
-    from {opacity: .5}
-    to {opacity: 1}
-} */
-
 .slider {
     position: relative;
     width: 100%;
@@ -460,3 +418,17 @@ footer{
     cursor: pointer;
 }
 
+@media only screen and (max-width: 850px){
+    .add-to-cart{
+        bottom: 0;
+        height: 2vh;
+    }
+
+    .ShopNow{
+        display: none;
+    }
+
+    .off-screen-menu{
+        font-size: 30px;
+    }
+}
